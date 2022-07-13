@@ -1,0 +1,31 @@
+name: ros
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - ca-certificates=2022.4.26=h06a4308_0
+  - certifi=2020.6.20=pyhd3eb1b0_3
+  - libffi=3.3=he6710b0_2
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgomp=11.2.0=h1234567_1
+  - libstdcxx-ng=11.2.0=h1234567_1
+  - ncurses=6.3=h5eee18b_3
+  - pip=19.3.1=py27_0
+  - python=2.7.18=ha1903f6_2
+  - readline=8.1.2=h7f8727e_1
+  - setuptools=44.0.0=py27_0
+  - sqlite=3.38.5=hc218d9a_0
+  - tk=8.6.12=h1ccaba5_0
+  - wheel=0.37.1=pyhd3eb1b0_0
+  - zlib=1.2.12=h7f8727e_2
+  - pip:
+    - catkin-pkg==0.5.2
+    - docutils==0.18.1
+    - numpy==1.16.6
+    - pyparsing==2.4.7
+    - python-dateutil==2.8.2
+    - pyyaml==5.4.1
+    - rospkg==1.4.0
+    - six==1.16.0
+prefix: /home/kevin/anaconda3/envs/ros
