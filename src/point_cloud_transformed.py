@@ -5,12 +5,14 @@ import geometry_msgs.msg
 from sensor_msgs.msg import PointCloud2
 
 rospy.init_node('velodyne_points_to_map_frame', anonymous=True)
+transform = geometry_msgs.msg.TransformStamped()                           
 
-def callback(scan):
+def pointcloud_callback(scan):
+
     '''
     Do transformation
     '''
-    pass
+    print('transform:', transform)
 
 if __name__== '__main__':
     
@@ -21,7 +23,7 @@ if __name__== '__main__':
     listener.waitForTransform("/map", "/velodyne", rospy.Time(), rospy.Duration(4.0))
     while not rospy.is_shutdown():
         try:
-            (trans,rot) = listener.lookupTransform('/map', '/velodyne', rospy.Time(0))
+            listener.lookupTransform('/map', '/velodyne', transform)
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
             continue
 
